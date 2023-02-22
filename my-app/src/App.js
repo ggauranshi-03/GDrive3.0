@@ -46,7 +46,16 @@ function App() {
   }, []);
   return (
     <>
-      <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+      {/* if modalOpen is false then share button should be visible else modal should be visible */}
+      {!modalOpen && (
+        <button className="share" onClick={() => setModalOpen(true)}>
+          Share
+        </button>
+      )}
+      {modalOpen && (
+        <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+      )}
+
       <div className="App">
         <h1 style={{ color: "aqua" }}>Block Drive</h1>
         <div class="bg"></div>
