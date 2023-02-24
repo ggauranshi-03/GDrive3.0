@@ -45,7 +45,7 @@ function App() {
     provider && loadProvider();
   }, []);
   return (
-    <>
+    <div>
       {/* if modalOpen is false then share button should be visible else modal should be visible */}
       {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
@@ -57,7 +57,7 @@ function App() {
       )}
 
       <div className="App">
-        <h1 style={{ color: "aqua" }}>Block Drive</h1>
+        <h1>Block Drive</h1>
         <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
@@ -68,7 +68,7 @@ function App() {
         <FileUpload account={account} provider={provider} contract={contract} />
         <Display contract={contract} account={account}></Display>
       </div>
-    </>
+    </div>
   );
 }
 
