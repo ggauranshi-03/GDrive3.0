@@ -95,7 +95,16 @@ const FileUpload = ({ contract, account, provider }) => {
           onChange={retrieveFile}
         ></input>
         <span className="textArea">Image: {fileName}</span>
-        <button type="submit" className="upload" disabled={!file}>
+        <button
+          type="submit"
+          className="upload"
+          disabled={!file}
+          style={{
+            backgroundImage: "linear-gradient(-180deg, #006aff, #466ccb)",
+            fontSize: "1vw",
+            color: "white",
+          }}
+        >
           Upload File
         </button>
       </form>

@@ -39,8 +39,8 @@
 }
 
 input[type="text"] {
-  background-color: #1e1e28;
-  border: none;
+  background-color: #26b2f8;
+  border: solid black;
   border-bottom: 2px solid #fff;
   color: #fff;
   font-size: 16px;

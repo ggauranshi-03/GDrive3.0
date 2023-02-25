@@ -46,6 +46,9 @@ function App() {
   }, []);
   return (
     <div>
+      {/* <video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+</video> */}
       {/* if modalOpen is false then share button should be visible else modal should be visible */}
       {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
@@ -57,13 +60,25 @@ function App() {
       )}
 
       <div className="App">
-        <h1>Block Drive</h1>
+        <h1 style={{ fontFamily: "Montserrat", color: "white" }}>
+          Block Drive
+        </h1>
         <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
 
-        <p style={{ color: "white" }}>
-          Account : {account ? account : "Not connected"}
+        <p
+          style={{
+            color: "white",
+
+            padding: "10px",
+            borderRadius: "5px",
+            textAlign: "center",
+            textTransform: "uppercase",
+            fontWeight: "normal",
+          }}
+        >
+          ACCOUNT : {account ? account : "Not connected"}
         </p>
         <FileUpload account={account} provider={provider} contract={contract} />
         <Display contract={contract} account={account}></Display>
